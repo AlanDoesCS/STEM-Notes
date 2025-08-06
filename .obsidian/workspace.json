@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/index.md",
+                "file": "docs/Mathematics/1. Probability.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "index"
+              "title": "1. Probability"
             }
           }
         ]
@@ -167,12 +167,12 @@
   },
   "active": "3cab9bfe14559a74",
   "lastOpenFiles": [
-    "docs/Mathematics/index.md",
-    "docs/Mathematics/1. Probability.md",
     "docs/Mathematics/2. Random Variables and Probability Distributions.md",
+    "docs/Mathematics/1. Probability.md",
+    "docs/Mathematics/index.md",
+    "docs/index.md",
     "docs/Mathematics/3. Hypothesis Testing.md",
     "docs/Physics/index.md",
-    "docs/index.md",
     "docs/Physics",
     "docs/Mathematics",
     "README.md",
