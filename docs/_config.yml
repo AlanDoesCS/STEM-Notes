@@ -2,3 +2,5 @@ remote_theme: pmarsceill/just-the-docs
 title: STEM Notes
 search_enabled: true
 favicon_ico: "/assets/favicon.png"
+include:
+  - _includes/head_custom.html
