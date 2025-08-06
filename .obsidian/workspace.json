@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/Mathematics/1. Probability.md",
+                "file": "docs/Mathematics/1. Sequences and Series.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "1. Probability"
+              "title": "1. Sequences and Series"
             }
           }
         ]
@@ -78,7 +78,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 404.5,
+    "collapsed": true
   },
   "right": {
     "id": "e9563b8a247f4110",
@@ -167,15 +168,33 @@
   },
   "active": "3cab9bfe14559a74",
   "lastOpenFiles": [
-    "docs/Mathematics/2. Random Variables and Probability Distributions.md",
-    "docs/Mathematics/1. Probability.md",
-    "docs/Mathematics/index.md",
-    "docs/index.md",
-    "docs/Mathematics/3. Hypothesis Testing.md",
+    "docs/Mathematics/19. Modelling.md",
+    "docs/Mathematics/18. Graph Theory.md",
+    "docs/Mathematics/17. Matrices.md",
+    "docs/Mathematics/16. Vectors.md",
+    "docs/Mathematics/15. Complex Numbers.md",
+    "docs/Mathematics/14. Differential Equations.md",
+    "docs/Mathematics/13. Integration.md",
+    "docs/Mathematics/12. Differentiation.md",
+    "docs/Mathematics/11. Functions.md",
+    "docs/Mathematics/10. Hypothesis Testing.md",
+    "docs/Mathematics/9. Random Variables and Probability Distributions.md",
+    "docs/Mathematics/8. Probability.md",
+    "docs/Mathematics/7. Descriptive Statistics.md",
+    "docs/Mathematics/6. Trigonometry.md",
+    "docs/Mathematics/5. Sectors and Radians.md",
+    "docs/Mathematics/4. Sets.md",
+    "docs/Mathematics/3. Exponents and Logarithms.md",
+    "docs/Mathematics/2. Finance.md",
+    "docs/Mathematics/1. Sequences and Series.md",
     "docs/Physics/index.md",
+    "docs/assets/favicon.png",
+    "docs/Mathematics/index.md",
+    "docs/Mathematics/14. Linear Modelling 1.md",
+    "docs/Mathematics/Untitled.md",
+    "docs/index.md",
     "docs/Physics",
     "docs/Mathematics",
-    "README.md",
-    "Welcome.md"
+    "README.md"
   ]
 }
