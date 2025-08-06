@@ -2,9 +2,5 @@
 title: Home
 nav_order: 1
 ---
-
-# Math Notes
-This website holds some of my mathematics notes
-
-\- Alan :)
-
+# STEM Notes
+A collection of notes on secondary mathematics and physics, with explorations into higher level topics.
