@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/Mathematics/index.md",
+                "file": "docs/index.md",
                 "mode": "source",
                 "source": false
               },
@@ -167,10 +167,10 @@
   },
   "active": "3cab9bfe14559a74",
   "lastOpenFiles": [
-    "docs/Mathematics/3. Hypothesis Testing.md",
+    "docs/Mathematics/index.md",
     "docs/Mathematics/1. Probability.md",
     "docs/Mathematics/2. Random Variables and Probability Distributions.md",
-    "docs/Mathematics/index.md",
+    "docs/Mathematics/3. Hypothesis Testing.md",
     "docs/Physics/index.md",
     "docs/index.md",
     "docs/Physics",
