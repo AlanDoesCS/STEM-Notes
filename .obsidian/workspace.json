@@ -78,8 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 245.5,
-    "collapsed": true
+    "width": 245.5
   },
   "right": {
     "id": "e9563b8a247f4110",
@@ -168,10 +167,8 @@
   },
   "active": "eb3ffa59aa872d71",
   "lastOpenFiles": [
-    "docs/Mathematics/1. Sequences and Series.md",
     "docs/Physics/index.md",
     "docs/Mathematics/index.md",
-    "docs/index.md",
     "docs/Mathematics/19. Modelling.md",
     "docs/Mathematics/18. Graph Theory.md",
     "docs/Mathematics/17. Matrices.md",
@@ -190,6 +187,8 @@
     "docs/Mathematics/4. Sets.md",
     "docs/Mathematics/3. Exponents and Logarithms.md",
     "docs/Mathematics/2. Finance.md",
+    "docs/Mathematics/1. Sequences and Series.md",
+    "docs/index.md",
     "docs/_includes/head_custom.html~",
     "docs/_includes/head_custom.html",
     "docs/_includes/head.html",
