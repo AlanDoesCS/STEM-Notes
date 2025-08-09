@@ -14,6 +14,9 @@ set "CHAPTER_DIR=%ROOT%docs\Mathematics"
 set "LISTFILE=%ROOT%filelist.txt"
 set "COMBINED=%CHAPTER_DIR%\_combined.md"
 
+REM Path to optional dedication page kept OUTSIDE the website content
+set "DEDICATION=%ROOT%Dedication Page.md"
+
 REM === Build filelist: index.md first, then numeric sort by leading digits (NO BOM) ===
 powershell -NoProfile -Command ^
   "$dir = '%CHAPTER_DIR%';" ^
@@ -24,8 +27,9 @@ powershell -NoProfile -Command ^
   "[System.IO.File]::WriteAllLines('%LISTFILE%', $files, (New-Object System.Text.UTF8Encoding($false)))"
 
 echo Building PDF for "!TITLE!" by "!AUTHOR!"
-echo Order:
+echo Order (from docs\Mathematics):
 type "%LISTFILE%"
+if exist "%DEDICATION%" echo (Dedication Page.md will be inserted after index.md)
 echo.
 
 REM === Concatenate into a single markdown file (with YAML header + page breaks) ===
@@ -33,14 +37,36 @@ REM === Concatenate into a single markdown file (with YAML header + page breaks)
 >> "%COMBINED%" echo title: "!TITLE!"
 >> "%COMBINED%" echo author: "!AUTHOR!"
 >> "%COMBINED%" echo ---
+
+REM -- Always include index.md first
+if exist "%CHAPTER_DIR%\index.md" (
+    type "%CHAPTER_DIR%\index.md" >> "%COMBINED%"
+    echo.>> "%COMBINED%"
+    echo \newpage>> "%COMBINED%"
+    echo.>> "%COMBINED%"
+) else (
+    echo [WARN] Missing file: index.md
+)
+
+REM -- Insert dedication page if present (kept outside website folder)
+if exist "%DEDICATION%" (
+    type "%DEDICATION%" >> "%COMBINED%"
+    echo.>> "%COMBINED%"
+    echo \newpage>> "%COMBINED%"
+    echo.>> "%COMBINED%"
+)
+
+REM -- Now append the rest of the chapters in the sorted order, skipping index.md
 for /f "usebackq delims=" %%F in ("%LISTFILE%") do (
-    if exist "%CHAPTER_DIR%\%%F" (
-        type "%CHAPTER_DIR%\%%F" >> "%COMBINED%"
-        echo.>> "%COMBINED%"
-        echo \newpage>> "%COMBINED%"
-        echo.>> "%COMBINED%"
-    ) else (
-        echo [WARN] Missing file: %%F
+    if /I not "%%F"=="index.md" (
+        if exist "%CHAPTER_DIR%\%%F" (
+            type "%CHAPTER_DIR%\%%F" >> "%COMBINED%"
+            echo.>> "%COMBINED%"
+            echo \newpage>> "%COMBINED%"
+            echo.>> "%COMBINED%"
+        ) else (
+            echo [WARN] Missing file: %%F
+        )
     )
 )
 
