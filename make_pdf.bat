@@ -1,0 +1,75 @@
+@echo off
+setlocal enabledelayedexpansion
+chcp 65001 >nul
+
+REM === Load config ===
+for /f "tokens=1,* delims==" %%A in (book_config.txt) do (
+    if /I "%%A"=="TITLE" set "TITLE=%%B"
+    if /I "%%A"=="AUTHOR" set "AUTHOR=%%B"
+)
+
+REM === Paths ===
+set "ROOT=%~dp0"
+set "CHAPTER_DIR=%ROOT%docs\Mathematics"
+set "LISTFILE=%ROOT%filelist.txt"
+set "COMBINED=%CHAPTER_DIR%\_combined.md"
+
+REM === Build filelist: index.md first, then numeric sort by leading digits ===
+powershell -NoProfile -Command ^
+  "$dir = '%CHAPTER_DIR%'; $out = '%LISTFILE%';" ^
+  "Set-Content -Encoding UTF8 -Path $out -Value 'index.md';" ^
+  "Get-ChildItem -LiteralPath $dir -Filter '*.md' -File | Where-Object { $_.BaseName -ne 'index' } |" ^
+  "Sort-Object @{ Expression = { if ($_.BaseName -match '^\s*(\d+)') { [int]$Matches[1] } else { [int]::MaxValue } } }, Name |" ^
+  "ForEach-Object { $_.Name } | Add-Content -Encoding UTF8 -Path $out"
+
+echo Building PDF for "!TITLE!" by "!AUTHOR!"
+echo Order:
+type "%LISTFILE%"
+echo.
+
+REM === Concatenate into a single markdown file (with YAML header + page breaks) ===
+> "%COMBINED%" echo ---
+>> "%COMBINED%" echo title: "!TITLE!"
+>> "%COMBINED%" echo author: "!AUTHOR!"
+>> "%COMBINED%" echo ---
+for /f "usebackq delims=" %%F in ("%LISTFILE%") do (
+    type "%CHAPTER_DIR%\%%F" >> "%COMBINED%"
+    echo.>> "%COMBINED%"
+    echo \newpage>> "%COMBINED%"
+    echo.>> "%COMBINED%"
+)
+
+REM === Sanitize title and author for filename ===
+set "SAFE_TITLE=%TITLE%"
+set "SAFE_AUTHOR=%AUTHOR%"
+set "SAFE_TITLE=%SAFE_TITLE::=-%"
+set "SAFE_TITLE=%SAFE_TITLE:.=%"
+set "SAFE_AUTHOR=%SAFE_AUTHOR::=-%"
+set "SAFE_AUTHOR=%SAFE_AUTHOR:.=%"
+
+REM === Build output filename from safe title and author ===
+set "OUTPUT=%ROOT%%SAFE_TITLE% - %SAFE_AUTHOR%.pdf"
+
+REM === Run Pandoc on the single combined file ===
+pushd "%CHAPTER_DIR%"
+pandoc "_combined.md" ^
+    -o "%OUTPUT%" ^
+    --pdf-engine=xelatex ^
+    --toc ^
+    --number-sections ^
+    --mathjax ^
+    -V title="%TITLE%" ^
+    -V author="%AUTHOR%"
+popd
+
+REM === Cleanup combined file if Pandoc was successful ===
+if %errorlevel%==0 (
+    del "%COMBINED%" >nul 2>&1
+    echo.
+    echo PDF generated at "!OUTPUT!"
+) else (
+    echo.
+    echo [ERROR] Pandoc failed — keeping "%COMBINED%" for inspection.
+)
+
+pause

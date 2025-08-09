@@ -1,0 +1,2 @@
+TITLE=First Principles: A Mathematics Handbook
+AUTHOR=Alan D. Smith

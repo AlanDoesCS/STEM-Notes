@@ -1,0 +1,20 @@
+﻿index.md
+1. Exponents and Logarithms.md
+2. Sequences and Series.md
+3. Finance.md
+4. Sets.md
+5. Sectors and Radians.md
+6. Trigonometry.md
+7. Descriptive Statistics.md
+8. Probability.md
+9. Random Variables and Probability Distributions.md
+10. Hypothesis Testing.md
+11. Functions.md
+12. Differentiation.md
+13. Integration.md
+14. Differential Equations.md
+15. Complex Numbers.md
+16. Vectors.md
+17. Matrices.md
+18. Graph Theory.md
+19. Modelling.md
