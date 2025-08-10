@@ -5,17 +5,20 @@ index.md
 4. Finance.md
 5. Sets.md
 6. Sectors and Radians.md
-7. Trigonometry.md
-8. Descriptive Statistics.md
-9. Probability.md
-10. Random Variables and Probability Distributions.md
-11. Hypothesis Testing.md
-12. Functions.md
-13. Differentiation.md
-14. Integration.md
-15. Differential Equations.md
-16. Complex Numbers.md
-17. Vectors.md
-18. Matrices.md
-19. Graph Theory.md
-20. Modelling.md
+7. Geometry.md
+8. Trigonometry.md
+9. Statistics.md
+10. Probability.md
+11. Random Variables and Probability Distributions.md
+12. Hypothesis Testing.md
+13. Functions.md
+14. Differentiation.md
+15. Integration.md
+16. Differential Equations.md
+17. Complex Numbers.md
+18. Vectors.md
+19. Matrices.md
+20. Graph Theory.md
+21. Modelling.md
+Appendix 1. Formula Reference.md
+Appendix 2. Worked Examples Template Page (TEMP).md
