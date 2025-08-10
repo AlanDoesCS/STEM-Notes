@@ -89,11 +89,9 @@ pandoc "_combined.md" ^
     --toc ^
     --number-sections ^
     --mathjax ^
-    --include-in-header="%ROOT%latex\boxes.tex" ^
     -V title="%TITLE%" ^
     -V author="%AUTHOR%"
 popd
-
 
 REM === Cleanup combined file if Pandoc was successful ===
 if %errorlevel%==0 (
