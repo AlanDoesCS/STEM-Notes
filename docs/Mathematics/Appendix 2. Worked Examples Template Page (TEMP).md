@@ -1,9 +1,9 @@
 ---
-title: 100. Test Page
-nav_order: 100
+title: Appendix 2. Worked Examples Template Page (TEMP)
+nav_order: 101
 parent: Mathematics
 ---
-# Worked Examples Template Page (TEMP)
+# Appendix 2. Worked Examples Template Page (TEMP) {-}
 
 | **Worked Example I**                                                                                                                                                                          |
 | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
