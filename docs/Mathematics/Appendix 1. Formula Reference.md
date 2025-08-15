@@ -5,22 +5,22 @@ parent: Mathematics
 ---
 # Appendix 1. Formula Reference {-}
 
-| **Exponents and Logarithms**                                    |                                                 |
-| --------------------------------------------------------------- | ----------------------------------------------- |
-| *Rules of Exponents*                                            | $a^m \cdot a^n = a^{m+n}$                       |
-|                                                                 | $a^m \div a^n = a^{m-n}$                        |
-|                                                                 | $(a^m)^n = a^{mn}$                              |
-|                                                                 | $a^0 = 1$                                       |
-|                                                                 | $a^1 = a$                                       |
-|                                                                 | $a^{-m} = \frac{1}{a^m}$                        |
-|                                                                 | $a^{\frac{1}{m}} = \sqrt[m]{a}$                 |
-|                                                                 | $a^{\frac{n}{m}} = (\sqrt[m]{a})^n$             |
-|                                                                 | $(ab)^n = a^n \cdot b^n$                        |
-|                                                                 | $\left(\frac{a}{b}\right)^n = \frac{a^n}{b^n}$  |
-| *Laws of Logarithms (real case: $a, x, y > 0$, and $a \neq 1$)* | $a^x = b \Longleftrightarrow \log_a{b}=x$       |
-|                                                                 | $\log_a{x} + \log_a{y} = \log_a{(xy)}$          |
-|                                                                 | $\log_a{x} - \log_a{y} = \log_a{(\frac{x}{y})}$ |
-|                                                                 | $n \log_a{x} = \log_a{(x^n)}$                   |
+| **Exponents and Logarithms**                                    |                                                                |
+| --------------------------------------------------------------- | -------------------------------------------------------------- |
+| *Rules of Exponents*                                            | $a^m \cdot a^n = a^{m+n}$                                      |
+|                                                                 | $a^m \div a^n = a^{m-n}$                                       |
+|                                                                 | $(a^m)^n = a^{mn}$                                             |
+|                                                                 | $a^0 = 1, \text{ for all } a \text{ in } \mathbb{C}, a \neq 0$ |
+|                                                                 | $a^1 = a$                                                      |
+|                                                                 | $a^{-m} = \frac{1}{a^m}$                                       |
+|                                                                 | $a^{\frac{1}{m}} = \sqrt[m]{a}$                                |
+|                                                                 | $a^{\frac{n}{m}} = (\sqrt[m]{a})^n$                            |
+|                                                                 | $(ab)^n = a^n \cdot b^n$                                       |
+|                                                                 | $\left(\frac{a}{b}\right)^n = \frac{a^n}{b^n}$                 |
+| *Laws of Logarithms (real case: $a, x, y > 0$, and $a \neq 1$)* | $a^x = b \Longleftrightarrow \log_a{b}=x$                      |
+|                                                                 | $\log_a{x} + \log_a{y} = \log_a{(xy)}$                         |
+|                                                                 | $\log_a{x} - \log_a{y} = \log_a{(\frac{x}{y})}$                |
+|                                                                 | $n \log_a{x} = \log_a{(x^n)}$                                  |
 
 | **Sequences and Series**                           |                                                                                                                          |
 | -------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
