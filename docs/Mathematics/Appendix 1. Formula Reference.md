@@ -22,18 +22,19 @@ parent: Mathematics
 |                                                                 | $\log_a{x} - \log_a{y} = \log_a{(\frac{x}{y})}$                |
 |                                                                 | $n \log_a{x} = \log_a{(x^n)}$                                  |
 
-| **Sequences and Series**                           |                                                                                                                          |
-| -------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
-| *Sigma notation properties*                        |                                                                                                                          |
-| Addition property                                  | $\sum_{n=1}^k{(a_n+b_n)}=\sum_{n=1}^k{a_n}+\sum_{n=1}^k{b_n}$                                                            |
-| Constant Multiplication Property                   | $\sum_{n=1}^k{c \cdot u_n} = c \cdot \sum_{n=1}^k{u_n}$                                                                  |
-| *Arithmetic Sequences and Series*                  |                                                                                                                          |
-| The $n^{\text{th}}$ term of an arithmetic sequence | $u_n=u_1+(n-1)d$                                                                                                         |
-| The sum of a finite arithmetic series              | $S_n = \frac{n}{2}(u_1 + u_n) \quad \text{OR} \quad S_n = \frac{n}{2}\left(2u_1 + (n - 1)d\right)$                       |
-| *Geometric Sequences and Series*                   |                                                                                                                          |
-| The $n^{\text{th}}$ term of a geometric sequence   | $u_n = u_1 r^{n-1}$                                                                                                      |
-| The sum of a finite arithmetic series              | $S_n = \frac{u_1(r^n-1)}{r-1} \quad \text{OR} \quad S_n = \frac{u_1(1-r^n)}{1-r}, \quad \text{where} \quad r \neq 1$<br> |
-| The sum of an infinite geometric series            | $S_{\infty}=\frac{u_1}{1-r}, \quad \text{where} \quad \lvert r \rvert < 1$                                               |
+| **Sequences and Series**                           |                                                                                                                        |
+| -------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| *Sigma notation properties*                        |                                                                                                                        |
+| Addition property                                  | $\sum_{n=1}^k{(a_n+b_n)}=\sum_{n=1}^k{a_n}+\sum_{n=1}^k{b_n}$                                                          |
+| Constant Multiplication Property                   | $\sum_{n=1}^k{c \cdot u_n} = c \cdot \sum_{n=1}^k{u_n}$                                                                |
+| *Arithmetic Sequences and Series*                  |                                                                                                                        |
+| The $n^{\text{th}}$ term of an arithmetic sequence | $u_n=u_1+(n-1)d$                                                                                                       |
+| The sum of a finite arithmetic series              | $S_n = \dfrac{n}{2}(u_1 + u_n) \quad \text{OR} \quad S_n = \dfrac{n}{2}\left(2u_1 + (n - 1)d\right)$                   |
+| *Geometric Sequences and Series*                   |                                                                                                                        |
+| The $n^{\text{th}}$ term of a geometric sequence   | $u_n = u_1 r^{n-1}$                                                                                                    |
+| The sum of a finite arithmetic series              | $S_n = \dfrac{u_1(r^n-1)}{r-1} \quad \text{OR} \quad S_n = \dfrac{u_1(1-r^n)}{1-r}, \quad \text{where} \quad r \neq 1$ |
+| The sum of an infinite geometric series            | $S_{\infty}=\dfrac{u_1}{1-r}, \quad \text{where} \quad \lvert r \rvert < 1$                                            |
+|                                                    |                                                                                                                        |
 
 | **Finance**                    |                                                                           |
 | ------------------------------ | ------------------------------------------------------------------------- |
@@ -70,18 +71,47 @@ parent: Mathematics
 |                            | $\cos^2\theta + \sin^2\theta = 1$            |
 |                            | $\tan\theta = \frac{\sin\theta}{\cos\theta}$ |
 
-| **Statistics**           |                                                               |
-| ------------------------ | ------------------------------------------------------------- |
-| Percentage error         | $\varepsilon = \lvert \frac{v_a - v_e}{v_e} \rvert \cdot 100$ |
-| *Descriptive statistics* |                                                               |
+| **Statistics**           |                                                                 |
+| ------------------------ | --------------------------------------------------------------- |
+| Percentage error         | $\varepsilon = \lvert \frac{v_a - v_e}{v_e} \rvert \cdot 100$   |
+| *Descriptive statistics* |                                                                 |
+| Interquartile Range      | $\text{IQR} = Q_3 - Q_1$                                        |
+| Arithmetic Mean          | $\bar{x} = \dfrac{\sum_{i=1}^{n}{f_ix_i}}{\sum_{i=1}^{n}{f_i}}$ |
+|                          |                                                                 |
 
-| **Probability** |     |
-| --------------- | --- |
-|                 |     |
+| **Probability**              |                                                                             |
+| ---------------------------- | --------------------------------------------------------------------------- |
+| Probability of an event $E$  | $\mathbb{P}(E)=\dfrac{\lvert E \rvert}{\lvert U \rvert}$                    |
+| Combined events              | $\mathbb{P}(E \cup F)=\mathbb{P}(E) + \mathbb{P}(F) - \mathbb{P}(E \cap F)$ |
+| Mutually exclusive events    | $\mathbb{P}(E \cap F) = 0$                                                  |
+| Probability of $E$ given $F$ | $\mathbb{P}(E \vert F) = \dfrac{\mathbb{P}(E \cap F)}{\mathbb{P}(F)}$       |
 
-| **Random Variables and Probability Distributions** |     |
-| -------------------------------------------------- | --- |
-|                                                    |     |
+| **Random Variables and Probability Distributions**                           |                                                                                                  |
+| ---------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------ |
+| Expected value of a single discrete random variable $X$                      | $\mathbb{E}[X] = \sum_{i} x_i \, \mathbb{P}(X = x_i)$                                            |
+| *Linear Transformation of a single random variable $X$*                      |                                                                                                  |
+| Expected Value                                                               | $\mathbb{E}[aX+b] = a\mathbb{E}[X]+b$                                                            |
+| Variance                                                                     | $\mathrm{Var}[aX+b]=a^2 \,  \mathrm{Var}[X]$                                                     |
+| *Linear combinations of random variables $X_1, X_2, \dots, X_n$*             |                                                                                                  |
+| Expected Value                                                               | $\mathbb{E}\!\left[\sum_{i=1}^n a_i X_i\right] = \sum_{i=1}^n a_i \mathbb{E}[X_i]$               |
+| *Linear combinations of independent random variables $X_1, X_2, \dots, X_n$* |                                                                                                  |
+| Variance                                                                     | $\mathrm{Var}\!\left[\sum_{i=1}^n a_i X_i\right]=\sum_{i=1}^{n}{a_i^2 \, \mathrm{Var}[X_i]}$     |
+| *Uniform Distribution*                                                       |                                                                                                  |
+| $X \sim \mathcal{U}(a, b)$                                                   | $a = \text{lower bound}$                                                                         |
+|                                                                              | $b = \text{upper bound}$                                                                         |
+| Mean ($\mu$)                                                                 | $\mathbb{E}[X]=\dfrac{a+b}{2}$                                                                   |
+| Variance ($\sigma^2$)                                                        | $\mathrm{Var}[X]=\dfrac{(b-a)^2}{12}$                                                            |
+| *Normal (Gaussian) Distribution*                                             |                                                                                                  |
+| $X \sim \mathcal{N}(\mu, \sigma^2)$                                          | $\mu = \text{mean}$                                                                              |
+|                                                                              | $\sigma^2 = \text{variance}$                                                                     |
+| Central Limit Theorem (CLT)                                                  | For large $n$, $\bar{X} \sim \mathcal{N}\!\left(\mu, \dfrac{\sigma^2}{n}\right)$ (approximately) |
+| *Binomial Distribution*                                                      |                                                                                                  |
+| $X \sim \mathcal{B}(n, p)$                                                   | $n = \text{number of trials}$                                                                    |
+|                                                                              | $p = \text{probability of success}$                                                              |
+| Mean ($\mu$)                                                                 | $\mathbb{E}[X]=np$                                                                               |
+| Variance ($\sigma^2$)                                                        | $\mathrm{Var}[X]=np(1-p)$                                                                        |
+| *Poisson Distribution*                                                       |                                                                                                  |
+| $X \sim \mathcal{P}(\lambda)$                                                | $\lambda = \text{expected rate (mean and variance)}$                                             |
 
 | **Hypothesis Testing** |     |
 | ---------------------- | --- |
@@ -137,6 +167,6 @@ parent: Mathematics
 |                     | If the graph is weighted, $a_{ij}=w_{ij}$, where $w_{ij}$ represents the weight of the edge from $i$ to $j$, or $0$ if there exists no edge.                                   |
 | Transition matrices | $a_{ij}$ is the probability of moving from vertex $i$ to vertex $j$ in a given step. *(**Note:** Some curricula define $a_{ij}$ as the probability of moving from $j$ to $i$)* |
 
-| **Modelling**     |                                                          |
-| ----------------- | -------------------------------------------------------- |
-| Logistic function | $\frac{L}{1+Ce^{-kx}}$, where $L, C, k \in \mathbb{R}^+$ |
+| **Modelling**     |                                                           |
+| ----------------- | --------------------------------------------------------- |
+| Logistic function | $\dfrac{L}{1+Ce^{-kx}}$, where $L, C, k \in \mathbb{R}^+$ |
