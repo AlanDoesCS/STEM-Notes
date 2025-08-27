@@ -37,6 +37,13 @@ parent: Mathematics
 |                                                          | $\text{OR} \quad S_n = \dfrac{u_1(1-r^n)}{1-r}$                             |
 | The sum of an infinite geometric series                  | $S_{\infty}=\dfrac{u_1}{1-r}, \quad \text{where} \quad \lvert r \rvert < 1$ |
 
+| **Functions**               |                                                                                                            |
+| --------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| Equation of a straight line | $y=mx+c \quad \text{OR} \quad y=m(x-x_1)+y_1$                                                              |
+| Line of symmetry            | If $f(x)=ax^2+bx+c$, the axis of symmetry of is $x=-\frac{b}{2a}$                                          |
+| Discriminant                | $\Delta = b^2 -4ac$                                                                                        |
+| Quadratic formula           | $\text{The solutions to }ax^2 + bx + c = 0 \text{ are } x = \dfrac{-b \pm \sqrt{b^2 - 4ac}}{2a}, a \neq 0$ |
+
 | **Finance**                    |                                                                           |
 | ------------------------------ | ------------------------------------------------------------------------- |
 | Interest paid                  | $\text{Interest Paid} = \text{Total Repayments} - \text{Amount Borrowed}$ |
@@ -49,6 +56,11 @@ parent: Mathematics
 | *De Morgan's Laws* |                               |
 | Union              | $(A \cup B)^c = A^c \cap B^c$ |
 | Intersection       | $(A \cap B)^c = A^c \cup B^c$ |
+
+| **Combinatorics** |     |
+| ----------------- | --- |
+| $n$ factorial     |     |
+| Binomail theorem  |     |
 
 | **Sectors and Radians**         |                                   |
 | ------------------------------- | --------------------------------- |
@@ -134,13 +146,6 @@ parent: Mathematics
 | *Two sample*                      |                                                                                                                                               |
 | $t$ (two-sample, pooled variance) | $t = \dfrac{\bar{x}_1 - \bar{x}_2}{s_p \sqrt{\tfrac{1}{n_1} + \tfrac{1}{n_2}}}, \quad s_p^2 = \dfrac{(n_1-1)s_1^2 + (n_2-1)s_2^2}{n_1+n_2-2}$ |
 | $z$ (two-sample proportions)      | $z = \dfrac{\hat{p}_1 - \hat{p}_2}{\sqrt{\hat{p}(1-\hat{p})(\tfrac{1}{n_1}+\tfrac{1}{n_2})}}, \quad \hat{p} = \dfrac{x_1+x_2}{n_1+n_2}$       |
-
-| **Functions**               |                                                                                                            |
-| --------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| Equation of a straight line | $y=mx+c \quad \text{OR} \quad y=m(x-x_1)+y_1$                                                              |
-| Line of symmetry            | If $f(x)=ax^2+bx+c$, the axis of symmetry of is $x=-\frac{b}{2a}$                                          |
-| Discriminant                | $\Delta = b^2 -4ac$                                                                                        |
-| Quadratic formula           | $\text{The solutions to }ax^2 + bx + c = 0 \text{ are } x = \dfrac{-b \pm \sqrt{b^2 - 4ac}}{2a}, a \neq 0$ |
 
 | **Differentiation**                         |                                                                                                                                                     |
 | ------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
