@@ -57,10 +57,11 @@ parent: Mathematics
 | Union              | $(A \cup B)^c = A^c \cap B^c$ |
 | Intersection       | $(A \cap B)^c = A^c \cup B^c$ |
 
-| **Combinatorics** |     |
-| ----------------- | --- |
-| $n$ factorial     |     |
-| Binomail theorem  |     |
+| **Combinatorics**              |     |
+| ------------------------------ | --- |
+| Fundamental Counting Principle |     |
+| $n$ factorial                  |     |
+| Binomail theorem               |     |
 
 | **Sectors and Radians**         |                                   |
 | ------------------------------- | --------------------------------- |
