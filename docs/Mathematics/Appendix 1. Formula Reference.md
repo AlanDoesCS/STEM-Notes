@@ -69,17 +69,20 @@ parent: Mathematics
 | Arc length                      | $l=r \theta$                      |
 | Sector area                     | $A=\frac{1}{2}r^2\theta$          |
 
-| **Geometry**                                                                   |                                                                                                                           |
-| ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------- |
-| Distance between two points $a$ and $b$ in $n$-dimensional space               | $\sqrt{\sum_{i=1}^{n} \left( b_i - a_i \right)^2}$                                                                        |
-| Midpoint of a line segment with endpoints $a$ and $b$ in $n$-dimensional space | $\left(\frac{1}{2}\left(a_i + b_i \right) \right)_{1 \leq i \leq n}$                                                      |
-| *Spheres of radius $r$*                                                        |                                                                                                                           |
-| Surface area                                                                   | $A=4 \pi r^2$                                                                                                             |
-| Volume                                                                         | $V=\frac{4}{3} \pi r^3$                                                                                                   |
-| *Pyramids of height $h$*                                                       |                                                                                                                           |
-| Volume                                                                         | $V=\frac{1}{3}Ah$, where $A$ is the area of the base, and $h$ is perpendicular to the base plane                          |
-| *Parallelogram*                                                                |                                                                                                                           |
-| Area                                                                           | $A=\lvert\mathbf{v}\times\mathbf{w}\rvert$, where $\mathbf{v}$ and $\mathbf{w}$ are two adjacent sides of a parallelogram |
+| **Geometry**                                                                     |                                                                      |
+| -------------------------------------------------------------------------------- | -------------------------------------------------------------------- |
+| Distance between two points $a$ and $b$ in $n$-dimensional space                 | $\sqrt{\sum_{i=1}^{n} \left( b_i - a_i \right)^2}$                   |
+| Midpoint of a line segment with endpoints $a$ and $b$ in $n$-dimensional space   | $\left(\frac{1}{2}\left(a_i + b_i \right) \right)_{1 \leq i \leq n}$ |
+| *Spheres of radius $r$*                                                          |                                                                      |
+| Surface area                                                                     | $A=4 \pi r^2$                                                        |
+| Volume                                                                           | $V=\frac{4}{3} \pi r^3$                                              |
+| *Pyramids of height $h$*                                                         |                                                                      |
+| Volume                                                                           | $V=\frac{1}{3}Ah$                                                    |
+| *Parallelogram*                                                                  |                                                                      |
+| Area (Given $\mathbf{v}$ and $\mathbf{w}$ are adjacent sides of a parallelogram) | $A=\lvert\mathbf{v}\times\mathbf{w}\rvert$                           |
+| *Cone*                                                                           |                                                                      |
+| Surface area of the curved surface                                               | $A=\pi rl$                                                           |
+| Volume (right cone)                                                              | $V=\frac{1}{3}\pi r^2 h$                                             |
 
 | **Trigonometry**                                                                               |                                                            |
 | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------- |
@@ -184,6 +187,8 @@ parent: Mathematics
 
 | **Differential Equations**                                  |                                                                                                                              |
 | ----------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
+| Euler's method (step size $h$)                              | $y_{n+1} = y_n + h f(x_n, y_n)$                                                                                              |
+|                                                             | $x_{n+1} = x_n + h$                                                                                                          |
 | Coupled linear differential equations (diagonalisable case) | $\mathbf{x}(t) = \begin{pmatrix} x(t) \\ y(t) \end{pmatrix} = C_1 e^{\lambda_1 t} \vec{p_1} + C_2 e^{\lambda_2 t} \vec{p_2}$ |
 
 | **Complex Numbers**           |                                                                   |
