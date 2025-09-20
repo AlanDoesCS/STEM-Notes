@@ -61,7 +61,7 @@ parent: Mathematics
 | ------------------------------ | --- |
 | Fundamental Counting Principle |     |
 | $n$ factorial                  |     |
-| Binomail theorem               |     |
+| Binomial theorem               |     |
 
 | **Sectors and Radians**         |                                   |
 | ------------------------------- | --------------------------------- |

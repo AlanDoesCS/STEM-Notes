@@ -1,0 +1,40 @@
+% ----- fancy headers -----
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{} % clear all
+
+% Page numbers at outer header; titles in inner header
+\fancyhead[LE,RO]{\thepage}
+\fancyhead[LO]{\nouppercase{\rightmark}} % odd: section/subsection
+\fancyhead[RE]{\nouppercase{\leftmark}}  % even: chapter/section
+\setlength{\headheight}{14pt}
+
+% Populate header marks nicely (book class)
+\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
+\renewcommand{\sectionmark}[1]{\markright{\thesection\ #1}}
+
+% --- Make 'plain' pages truly plain (no header/footer) ---
+% Used by title page, chapter openings, etc.
+\fancypagestyle{plain}{%
+	\fancyhf{}%
+	% If you want a page number on plain pages, uncomment:
+	% \fancyfoot[C]{\thepage}
+}
+
+% Optional: one-off style that keeps only a centered footer page number
+\fancypagestyle{noheader}{%
+	\fancyhf{}%
+	\fancyfoot[C]{\thepage}%
+}
+
+% Less picky float placement
+\makeatletter
+\def\fps@figure{!htbp}
+\def\fps@table{!htbp}
+\makeatother
+
+% Keep floats inside sections (or use [chapter] if you prefer)
+\usepackage[section]{placeins}
+
+% Start in front matter (roman numerals)
+\AtBeginDocument{\frontmatter}

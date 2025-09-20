@@ -1,9 +1,9 @@
 ---
-title: Appendix 2. Worked Examples Template Page (TEMP)
-nav_order: 101
+title: Appendix 4. Worked Examples Template Page (TEMP)
+nav_order: 103
 parent: Mathematics
 ---
-# Appendix 2. Worked Examples Template Page (TEMP) {-}
+# Appendix 4. Worked Examples Template Page (TEMP) {-}
 
 | **Worked Example I**                                              |
 | ----------------------------------------------------------------- |

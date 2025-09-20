@@ -22,4 +22,6 @@ index.md
 20. Graph Theory.md
 21. Modelling.md
 Appendix 1. Formula Reference.md
-Appendix 2. Worked Examples Template Page (TEMP).md
+Appendix 2. Exercise Solutions.md
+Appendix 3. References and Notes.md
+Appendix 4. Worked Examples Template Page (TEMP).md
