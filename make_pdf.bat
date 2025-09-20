@@ -18,11 +18,11 @@ REM Path to optional pages kept OUTSIDE the website content
 set "DEDICATION=%ROOT%Dedication Page.md"
 set "COPYRIGHT=%ROOT%Copyright Page.md"
 
-REM === Build filelist: index.md first, then numeric sort by leading digits ===
+REM === Build filelist: numeric sort by leading digits (Ignore index.md) ===
 powershell -NoProfile -Command ^
   "$dir = '%CHAPTER_DIR%';" ^
-  "$files = @('index.md');" ^
-  "$files += Get-ChildItem -LiteralPath $dir -Filter '*.md' -File | Where-Object { $_.BaseName -ne 'index' } |" ^
+  "$files = Get-ChildItem -LiteralPath $dir -Filter '*.md' -File |" ^
+  "  Where-Object { $_.BaseName -ne 'index' } |" ^
   "  Sort-Object @{ Expression = { if ($_.BaseName -match '^\s*(\d+)') { [int]$Matches[1] } else { [int]::MaxValue } } }, Name |" ^
   "  ForEach-Object { $_.Name };" ^
   "[System.IO.File]::WriteAllLines('%LISTFILE%', $files, (New-Object System.Text.UTF8Encoding($false)))"
@@ -30,7 +30,7 @@ powershell -NoProfile -Command ^
 echo Building PDF for "!TITLE!" by "!AUTHOR!"
 echo Order (from docs\Mathematics):
 type "%LISTFILE%"
-if exist "%DEDICATION%" echo (Dedication Page.md will be inserted after index.md)
+if exist "%DEDICATION%" echo (Dedication Page.md will be inserted after TITLE page)
 echo.
 
 REM === Concatenate into a single markdown file (with YAML header + page breaks) ===
@@ -39,34 +39,25 @@ REM === Concatenate into a single markdown file (with YAML header + page breaks)
 >> "%COMBINED%" echo author: "!AUTHOR!"
 >> "%COMBINED%" echo ---
 
-REM -- Insert copyright page if present
+REM -- Copyright page (immediately after title)
 if exist "%COPYRIGHT%" (
     type "%COPYRIGHT%" >> "%COMBINED%"
     echo.>> "%COMBINED%"
     echo \thispagestyle{empty}>> "%COMBINED%"
-    echo \FloatBarrier>> "%COMBINED%"
-    echo \newpage>> "%COMBINED%"
+    echo \clearpage>> "%COMBINED%"
     echo.>> "%COMBINED%"
 )
 
-echo \thispagestyle{empty}>> "%COMBINED%"
-echo \FloatBarrier>> "%COMBINED%"
-echo \newpage>> "%COMBINED%"
-
-REM -- Insert dedication page if present
+REM -- Dedication page (then break)
 if exist "%DEDICATION%" (
     type "%DEDICATION%" >> "%COMBINED%"
     echo.>> "%COMBINED%"
     echo \thispagestyle{empty}>> "%COMBINED%"
-    echo \newpage>> "%COMBINED%"
+    echo \clearpage>> "%COMBINED%"
     echo.>> "%COMBINED%"
 )
 
-echo \thispagestyle{empty}>> "%COMBINED%"
-echo \FloatBarrier>> "%COMBINED%"
-echo \newpage>> "%COMBINED%"
-
-REM -- Insert table of contents here
+REM -- Table of Contents
 echo \frontmatter>> "%COMBINED%"
 echo.>> "%COMBINED%"
 echo \tableofcontents>> "%COMBINED%"
@@ -74,21 +65,19 @@ echo.>> "%COMBINED%"
 echo \newpage>> "%COMBINED%"
 echo.>> "%COMBINED%"
 
-REM -- Switch to main matter
+REM -- Main matter
 echo \mainmatter>> "%COMBINED%"
 echo.>> "%COMBINED%"
 
-REM -- Now append the rest of the chapters in the sorted order, skipping index.md
+REM -- Append all chapters from list (no index.md to skip)
 for /f "usebackq delims=" %%F in ("%LISTFILE%") do (
-    if /I not "%%F"=="index.md" (
-        if exist "%CHAPTER_DIR%\%%F" (
-            type "%CHAPTER_DIR%\%%F" >> "%COMBINED%"
-            echo.>> "%COMBINED%"
-            echo \newpage>> "%COMBINED%"
-            echo.>> "%COMBINED%"
-        ) else (
-            echo [WARN] Missing file: %%F
-        )
+    if exist "%CHAPTER_DIR%\%%F" (
+        type "%CHAPTER_DIR%\%%F" >> "%COMBINED%"
+        echo.>> "%COMBINED%"
+        echo \newpage>> "%COMBINED%"
+        echo.>> "%COMBINED%"
+    ) else (
+        echo [WARN] Missing file: %%F
     )
 )
 

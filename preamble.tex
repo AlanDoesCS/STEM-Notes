@@ -3,10 +3,10 @@
 \pagestyle{fancy}
 \fancyhf{} % clear all
 
-% Page numbers at outer header; titles in inner header
-\fancyhead[LE,RO]{\thepage}
-\fancyhead[LO]{\nouppercase{\rightmark}} % odd: section/subsection
-\fancyhead[RE]{\nouppercase{\leftmark}}  % even: chapter/section
+% SWAPPED: page numbers now at LO/RE (outer), titles mirrored
+\fancyhead[LO,RE]{\thepage}                         % was [LE,RO]
+\fancyhead[RO]{\nouppercase{\rightmark}}            % was [LO]
+\fancyhead[LE]{\nouppercase{\leftmark}}             % was [RE]
 \setlength{\headheight}{14pt}
 
 % Populate header marks nicely (book class)
@@ -27,6 +27,14 @@
 	\fancyfoot[C]{\thepage}%
 }
 
+% ----- SWAP ODD/EVEN MARGINS (offsets) -----
+\makeatletter
+\newlength\OddSideTmp
+\setlength\OddSideTmp{\oddsidemargin}
+\setlength{\oddsidemargin}{\evensidemargin}
+\setlength{\evensidemargin}{\OddSideTmp}
+\makeatother
+
 % Less picky float placement
 \makeatletter
 \def\fps@figure{!htbp}
@@ -36,5 +44,20 @@
 % Keep floats inside sections (or use [chapter] if you prefer)
 \usepackage[section]{placeins}
 
-% Start in front matter (roman numerals)
-\AtBeginDocument{\frontmatter}
+% ----- Prevent extra blank after title page -----
+\makeatletter
+\renewcommand{\maketitle}{%
+	\begin{titlepage}
+		\thispagestyle{empty}
+		\begin{center}
+			{\LARGE\bfseries \@title \par}
+			\vspace{1.5em}
+			{\large \@author \par}
+			\vspace{1em}
+			{\large \the\year \par}
+		\end{center}
+	\end{titlepage}
+	\clearpage % <-- only advance one page, not cleardoublepage
+}
+\makeatother
+

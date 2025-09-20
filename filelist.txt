@@ -1,4 +1,3 @@
-index.md
 0. Introduction.md
 1. Exponents and Logarithms.md
 2. Sequences and Series.md
