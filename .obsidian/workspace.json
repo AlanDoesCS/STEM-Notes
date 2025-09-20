@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "78b0469999483fa0",
+        "id": "eaac081c58c294ae",
         "type": "tabs",
         "children": [
           {
-            "id": "3878e8438943dcc8",
+            "id": "64bb71f980171f78",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/Mathematics/5. Sets.md",
+                "file": "docs/Mathematics/0. Introduction.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "5. Sets"
+              "title": "0. Introduction"
             }
           }
         ]
@@ -78,7 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 245.5
+    "width": 200
   },
   "right": {
     "id": "e9563b8a247f4110",
@@ -166,43 +166,45 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "3878e8438943dcc8",
+  "active": "64bb71f980171f78",
   "lastOpenFiles": [
+    "docs/Mathematics/index.md",
     "First Principles- A Mathematics Handbook - Alan D  Smith.pdf",
     "docs/Mathematics/_combined.md",
-    "docs/Mathematics/Appendix 1. Formula Reference.md",
-    "docs/Mathematics/index.md",
-    "docs/Physics/index.md",
     "docs/Mathematics/0. Introduction.md",
-    "docs/assets/favicon.png",
-    "docs/Mathematics/3. Functions.md",
-    "docs/Mathematics/19. Matrices.md",
-    "docs/Mathematics/20. Graph Theory.md",
-    "docs/Mathematics/6. Combinatorics.md",
     "docs/Mathematics/1. Exponents and Logarithms.md",
-    "docs/Mathematics/2. Sequences and Series.md",
-    "docs/Mathematics/4. Finance.md",
-    "docs/Mathematics/5. Sets.md",
+    "Copyright Page.md",
+    "Dedication Page - Copy.md",
+    "docs/Mathematics/Appendix 4. Worked Examples Template Page (TEMP).md",
+    "docs/Mathematics/Appendix 3. References and Notes.md",
+    "docs/Mathematics/Appendix 2. Exercise Solutions.md",
+    "docs/Mathematics/Appendix 1. Formula Reference.md",
+    "docs/Mathematics/21. Modelling.md",
+    "docs/Mathematics/20. Graph Theory.md",
+    "docs/Mathematics/17. Complex Numbers.md",
     "docs/Mathematics/7. Sectors and Radians.md",
+    "docs/Mathematics/6. Combinatorics.md",
+    "docs/Mathematics/5. Sets.md",
+    "preamble.tex~txs0",
+    "preamble.tex",
+    "New Text Document.txt",
+    "docs/assets/favicon.png",
+    "docs/assets/number-sets.png",
+    "docs/assets/Number sets.png",
+    "docs/Mathematics/19. Matrices.md",
     "docs/Mathematics/8. Geometry.md",
     "docs/Mathematics/9. Trigonometry.md",
     "docs/Mathematics/10. Statistics.md",
+    "docs/Mathematics/4. Finance.md",
+    "docs/Mathematics/2. Sequences and Series.md",
+    "docs/Mathematics/3. Functions.md",
     "docs/Mathematics/11. Probability.md",
-    "docs/Mathematics/12. Random Variables and Probability Distributions.md",
-    "docs/Mathematics/13. Hypothesis Testing.md",
-    "docs/Mathematics/14. Differentiation.md",
-    "docs/Mathematics/15. Integration.md",
-    "docs/Mathematics/16. Differential Equations.md",
-    "docs/Mathematics/17. Complex Numbers.md",
-    "docs/Mathematics/18. Vectors.md",
+    "docs/Physics/index.md",
     "docs/_includes/footer.html",
     "docs/_includes/New Text Document.txt",
     "latex/boxes.lua",
     "latex/New Text Document.txt",
     "latex/test.synctex(busy)",
-    "latex/test.synctex.gz",
-    "latex/test.aux",
-    "latex/test.pdf",
-    "latex/test.log"
+    "latex/test.synctex.gz"
   ]
 }
